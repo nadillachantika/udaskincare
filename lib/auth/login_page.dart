@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:udaskincare/auth/register_page.dart';
+import 'package:udaskincare/home/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key key}) : super(key: key);
@@ -12,6 +13,7 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   bool obsecure = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,9 +78,8 @@ class _LoginPageState extends State<LoginPage> {
                   autovalidateMode: AutovalidateMode.onUserInteraction,
                   decoration: InputDecoration(
                     suffixIcon: IconButton(
-                        icon: Icon(obsecure
-                            ? Icons.visibility
-                            : Icons.visibility_off),
+                        icon: Icon(
+                            obsecure ? Icons.visibility : Icons.visibility_off),
                         onPressed: () {
                           setState(() => obsecure = !obsecure);
                         }),
@@ -123,6 +124,14 @@ class _LoginPageState extends State<LoginPage> {
                         child: MaterialButton(
                           onPressed: () {
                             //Home Page
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => HomePage(
+                                  initTab: 0,
+                                ),
+                              ),
+                            );
                           },
                           padding: EdgeInsets.symmetric(vertical: 15),
                           color: Colors.black,
@@ -197,9 +206,13 @@ class _LoginPageState extends State<LoginPage> {
                         style: TextStyle(color: Colors.grey, fontSize: 16),
                         children: [
                           TextSpan(
-                            recognizer: TapGestureRecognizer()..onTap = (){
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterPage()));
-                            },
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => RegisterPage()));
+                              },
                             text: ' Sign Up',
                             style: TextStyle(
                                 color: Colors.black,
