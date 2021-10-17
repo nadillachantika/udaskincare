@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:udaskincare/auth/login_page.dart';
+import 'package:udaskincare/detail_order/pesanan_screen.dart';
 
 class ProfilePage extends StatefulWidget {
   @override
@@ -88,7 +89,9 @@ class _ProfilePageState extends State<ProfilePage> {
                       Container(
                         margin: EdgeInsets.fromLTRB(16, 0, 0, 0),
                         child: ListTile(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => PesananScreen()));
+                          },
                           leading: Image.asset("assets/order.png"),
                           title: Text(
                             "My Orders",
@@ -97,42 +100,42 @@ class _ProfilePageState extends State<ProfilePage> {
                           trailing: Icon(Icons.arrow_forward_ios),
                         ),
                       ),
-                      Container(
-                        margin: EdgeInsets.fromLTRB(16, 0, 0, 0),
-                        child: ListTile(
-                          onTap: () {},
-                          leading: Image.asset("assets/address.png"),
-                          title: Text(
-                            "Shipping Address",
-                            style: TextStyle(color: Colors.grey),
-                          ),
-                          trailing: Icon(Icons.arrow_forward_ios),
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.fromLTRB(16, 0, 0, 0),
-                        child: ListTile(
-                          onTap: () {},
-                          leading: Image.asset("assets/payment.png"),
-                          title: Text(
-                            "Payment Methodes",
-                            style: TextStyle(color: Colors.grey),
-                          ),
-                          trailing: Icon(Icons.arrow_forward_ios),
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.fromLTRB(16, 0, 0, 0),
-                        child: ListTile(
-                          onTap: () {},
-                          leading: Image.asset("assets/voucher.png"),
-                          title: Text(
-                            "My Voucher",
-                            style: TextStyle(color: Colors.grey),
-                          ),
-                          trailing: Icon(Icons.arrow_forward_ios),
-                        ),
-                      ),
+                      // Container(
+                      //   margin: EdgeInsets.fromLTRB(16, 0, 0, 0),
+                      //   child: ListTile(
+                      //     onTap: () {},
+                      //     leading: Image.asset("assets/address.png"),
+                      //     title: Text(
+                      //       "Shipping Address",
+                      //       style: TextStyle(color: Colors.grey),
+                      //     ),
+                      //     trailing: Icon(Icons.arrow_forward_ios),
+                      //   ),
+                      // ),
+                      // Container(
+                      //   margin: EdgeInsets.fromLTRB(16, 0, 0, 0),
+                      //   child: ListTile(
+                      //     onTap: () {},
+                      //     leading: Image.asset("assets/payment.png"),
+                      //     title: Text(
+                      //       "Payment Methodes",
+                      //       style: TextStyle(color: Colors.grey),
+                      //     ),
+                      //     trailing: Icon(Icons.arrow_forward_ios),
+                      //   ),
+                      // ),
+                      // Container(
+                      //   margin: EdgeInsets.fromLTRB(16, 0, 0, 0),
+                      //   child: ListTile(
+                      //     onTap: () {},
+                      //     leading: Image.asset("assets/voucher.png"),
+                      //     title: Text(
+                      //       "My Voucher",
+                      //       style: TextStyle(color: Colors.grey),
+                      //     ),
+                      //     trailing: Icon(Icons.arrow_forward_ios),
+                      //   ),
+                      // ),
                       Container(
                         margin: EdgeInsets.fromLTRB(16, 0, 0, 0),
                         child: ListTile(
