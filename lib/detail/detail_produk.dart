@@ -8,8 +8,8 @@ import 'package:udaskincare/home/home_page.dart';
 
 class DetailProduk extends StatefulWidget {
   final Map<String, dynamic> produk;
-
-  const DetailProduk({Key key, this.produk}) : super(key: key);
+  final List<Map<String, dynamic>> listProduk;
+  const DetailProduk({Key key, this.produk,  this.listProduk}) : super(key: key);
 
   @override
   _DetailProdukState createState() => _DetailProdukState();

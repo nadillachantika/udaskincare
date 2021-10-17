@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:udaskincare/home/home_screen.dart';
+import 'package:udaskincare/profile/profile_page.dart';
 
 class HomePage extends StatefulWidget {
   final int initTab;
@@ -23,7 +24,7 @@ class _HomePageState extends State<HomePage> {
     HomeScreen(),
     Container(),
     Container(),
-    Container(),
+    ProfilePage(),
   ];
 
   @override
