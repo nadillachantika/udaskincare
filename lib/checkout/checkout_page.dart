@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:udaskincare/checkout/Pembayaran.dart';
 import 'package:udaskincare/checkout/address_page.dart';
+import 'package:udaskincare/checkout/success_payment_saldo_panen.dart';
 import 'package:udaskincare/home/home_page.dart';
 
 import 'Kurir.dart';
@@ -491,12 +492,10 @@ class _CheckoutPageState extends State<CheckoutPage> {
                               borderRadius: BorderRadius.circular(20),
                               child: MaterialButton(
                                 onPressed: () {
-                                  // Navigator.pushReplacement(
-                                  //     context,
-                                  //     MaterialPageRoute(
-                                  //         builder: (context) => HomePage(
-                                  //               initTab: 0,
-                                  //             )));
+                                  Navigator.pushReplacement(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => SuccessPayment()));
                                 },
                                 padding: EdgeInsets.symmetric(
                                     vertical: 19, horizontal: 115),
