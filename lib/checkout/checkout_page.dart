@@ -351,7 +351,9 @@ class _CheckoutPageState extends State<CheckoutPage> {
                               border: Border.all(color: Colors.black)),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [],
+                            children: [
+                              //diisi produk - produkk apa aja yang dibeli dari cart.
+                            ],
                           ),
                         ),
                       ],
