@@ -1,6 +1,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:udaskincare/detail_order/detail_order.dart';
 
 
 class CompletedPengirimanPage extends StatefulWidget {
@@ -255,12 +256,11 @@ class _CompletedPengirimanPageState extends State<CompletedPengirimanPage> {
                           onPressed: () {
 
 
-                            // Navigator.push(
-                            //     context,
-                            //     MaterialPageRoute(
-                            //         builder: (_) =>
-                            //             CheckoutPagePesanan(
-                            //                 data)));
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (_) =>
+                                        DetailOrder()));
                           },
                           child: Text('Detail Order',
                               style: TextStyle(

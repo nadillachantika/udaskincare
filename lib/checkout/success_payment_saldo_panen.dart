@@ -18,9 +18,8 @@ class _SuccessPaymentState extends State<SuccessPayment> {
 
   @override
   Widget build(BuildContext context) {
-    return Theme(
-      data: ThemeData(fontFamily: 'visby'),
-      child: AlertDialog(
+    return Scaffold(
+      body: AlertDialog(
         insetPadding: EdgeInsets.all(20),
         shape:
         RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
