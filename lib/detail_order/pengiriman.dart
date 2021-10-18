@@ -78,231 +78,229 @@ class _PengirimanPageState extends State<PengirimanPage> {
   @override
   Widget build(BuildContext context) {
     double widthScreen = MediaQuery.of(context).size.width;
-    return Theme(
-      child: Scaffold(
-          backgroundColor: Color(0xFFE5E5E5),
-          body: ListView.builder(
-            shrinkWrap: true,
-            itemCount: item.length,
-            itemBuilder: (context, index) {
-              return Card(
-                elevation: 10,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Column(
-                        crossAxisAlignment:
-                        CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            child:
-                            Text("UCare2021"),
+    return Scaffold(
+        backgroundColor: Color(0xFFE5E5E5),
+        body: ListView.builder(
+          shrinkWrap: true,
+          itemCount: item.length,
+          itemBuilder: (context, index) {
+            return Card(
+              elevation: 10,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Column(
+                      crossAxisAlignment:
+                      CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          child:
+                          Text("UCare2021"),
+                        ),
+                        // Container(
+                        //   child: Text(
+                        //     "${formatDateWithDay(DateTime.parse(
+                        //         data.product.createdAt), context)}",
+                        //     style: TextStyle(
+                        //         color: Color(0xFF4CAAAA),
+                        //         fontWeight: FontWeight.bold),
+                        //   ),
+                        // ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Container(
+                      child: Row(children: [
+                        Container(
+                          child: Image.asset(
+                            "assets/item_care.jpg",
+                            height: 100,
+                            width: 100,
                           ),
-                          // Container(
-                          //   child: Text(
-                          //     "${formatDateWithDay(DateTime.parse(
-                          //         data.product.createdAt), context)}",
-                          //     style: TextStyle(
-                          //         color: Color(0xFF4CAAAA),
-                          //         fontWeight: FontWeight.bold),
-                          //   ),
-                          // ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Container(
-                        child: Row(children: [
-                          Container(
-                            child: Image.asset(
-                              "assets/item_care.jpg",
-                              height: 100,
-                              width: 100,
-                            ),
-                          ),
-                          Container(
-                            child: Column(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment:
-                              CrossAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding:
-                                  EdgeInsets.only(left: 8.0),
-                                  child: Container(
-                                    child: Text(
-                                      "Whitening Screen",
-                                      style: TextStyle(
-                                          fontWeight:
-                                          FontWeight.bold,
-                                          fontSize: 18),
-                                    ),
+                        ),
+                        Container(
+                          child: Column(
+                            mainAxisAlignment:
+                            MainAxisAlignment.spaceEvenly,
+                            crossAxisAlignment:
+                            CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding:
+                                EdgeInsets.only(left: 8.0),
+                                child: Container(
+                                  child: Text(
+                                    "Whitening Screen",
+                                    style: TextStyle(
+                                        fontWeight:
+                                        FontWeight.bold,
+                                        fontSize: 18),
                                   ),
                                 ),
-                                Padding(
-                                  padding:
-                                  EdgeInsets.only(left: 8.0),
-                                  child: Container(
-                                    child: Text(
-                                      "2 Qty",
-                                      style: TextStyle(
-                                          fontWeight:
-                                          FontWeight.bold,
-                                          color: Colors.grey),
-                                    ),
+                              ),
+                              Padding(
+                                padding:
+                                EdgeInsets.only(left: 8.0),
+                                child: Container(
+                                  child: Text(
+                                    "2 Qty",
+                                    style: TextStyle(
+                                        fontWeight:
+                                        FontWeight.bold,
+                                        color: Colors.grey),
                                   ),
                                 ),
-                                Padding(
-                                  padding:
-                                  EdgeInsets.only(left: 8.0),
-                                  child: Container(
-                                    margin: EdgeInsets.fromLTRB(
-                                        0, 0, 0, 30),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                      MainAxisAlignment
-                                          .spaceEvenly,
-                                      children: [
-                                        Container(
-                                          child: Text(
-                                            "Total Pembayaran",
-                                            style: TextStyle(
-                                                color:
-                                                Colors.grey,
-                                                fontWeight:
-                                                FontWeight
-                                                    .bold),
-                                          ),
+                              ),
+                              Padding(
+                                padding:
+                                EdgeInsets.only(left: 8.0),
+                                child: Container(
+                                  margin: EdgeInsets.fromLTRB(
+                                      0, 0, 0, 30),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                    MainAxisAlignment
+                                        .spaceEvenly,
+                                    children: [
+                                      Container(
+                                        child: Text(
+                                          "Total Pembayaran",
+                                          style: TextStyle(
+                                              color:
+                                              Colors.grey,
+                                              fontWeight:
+                                              FontWeight
+                                                  .bold),
                                         ),
-                                        Container(
-                                          child: Text(
-                                            " Rp. 20000",
-                                            style: TextStyle(
-                                                color:
-                                                Colors.black,
-                                                fontWeight:
-                                                FontWeight
-                                                    .bold),
-                                          ),
+                                      ),
+                                      Container(
+                                        child: Text(
+                                          " Rp. 20000",
+                                          style: TextStyle(
+                                              color:
+                                              Colors.black,
+                                              fontWeight:
+                                              FontWeight
+                                                  .bold),
                                         ),
-                                      ],
-                                    ),
+                                      ),
+                                    ],
                                   ),
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
-                        ]),
-                      ),
-                      Divider(
-                        color: Colors.black,
-                      ),
-                      Row(
-                        children: [
-                          Container(
-                            child: Text(
-                              "Status: ",
-                              style: TextStyle(
-                                  color: Colors.grey,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 12),
-                            ),
+                        ),
+                      ]),
+                    ),
+                    Divider(
+                      color: Colors.black,
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          child: Text(
+                            "Status: ",
+                            style: TextStyle(
+                                color: Colors.grey,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12),
                           ),
-                          Container(
-                            child: Text(
-                              "Proses ",
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 12),
-                            ),
+                        ),
+                        Container(
+                          child: Text(
+                            "Proses ",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12),
                           ),
-                          Container(
-                            child: Text(
-                              "17 Oktober 2021",
-                              style: TextStyle(
-                                  color: Color(0xFF4CAAAA),
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 12),
-                            ),
+                        ),
+                        Container(
+                          child: Text(
+                            "17 Oktober 2021",
+                            style: TextStyle(
+                                color: Color(0xFF4CAAAA),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12),
                           ),
-                          Container(
-                            child: Text(
-                              "($difference hari)",
-                              style: TextStyle(
-                                  color: Colors.grey,
-                                  fontSize: 12,
-                                  fontStyle: FontStyle.italic),
-                            ),
+                        ),
+                        Container(
+                          child: Text(
+                            "($difference hari)",
+                            style: TextStyle(
+                                color: Colors.grey,
+                                fontSize: 12,
+                                fontStyle: FontStyle.italic),
                           ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment:
-                        MainAxisAlignment.start,
-                        children: [
-                          MaterialButton(
-                            minWidth: widthScreen / 2.5,
-                            shape: RoundedRectangleBorder(
-                                borderRadius:
-                                BorderRadius.circular(
-                                    25)),
-                            textColor: Colors.white,
-                            color: Color(0xFF4CAAAA),
-                            onPressed: () {
-
-
-                              // Navigator.push(
-                              //     context,
-                              //     MaterialPageRoute(
-                              //         builder: (_) =>
-                              //             CheckoutPagePesanan(
-                              //                 data)));
-                            },
-                            child: Text('Lanjut Kirim',
-                                style: TextStyle(
-                                    fontWeight:
-                                    FontWeight.bold)),
-                          ),
-
-                          // Visibility(
-                          //   visible: data.product.hargaPenadah != null,
-                          //   child: MaterialButton(
-                          //     minWidth: widthScreen / 2.5,
-                          //     shape: RoundedRectangleBorder(
-                          //         borderRadius:
-                          //             BorderRadius.circular(
-                          //                 25)),
-                          //     textColor: Colors.white,
-                          //     color: Color(0xFF094670),
-                          //     onPressed: () {
-                          //       log('idTransask ${data?.idTransaction ?? 0}');
-                          //       goTo(
-                          //           JualKembaliPage(data,
-                          //               difference, status),
-                          //           context);
-                          //     },
-                          //     child: Text(
-                          //       'Jual Kembali',
-                          //       style: TextStyle(
-                          //           fontWeight:
-                          //               FontWeight.bold),
-                          //     ),
-                          //   ),
-                          // )
-                        ],
-                      )
-                    ],
-                  ),
+                        ),
+                      ],
+                    ),
+                    // Row(
+                    //   mainAxisAlignment:
+                    //   MainAxisAlignment.start,
+                    //   children: [
+                    //     MaterialButton(
+                    //       minWidth: widthScreen / 2.5,
+                    //       shape: RoundedRectangleBorder(
+                    //           borderRadius:
+                    //           BorderRadius.circular(
+                    //               25)),
+                    //       textColor: Colors.white,
+                    //       color: Color(0xFF4CAAAA),
+                    //       onPressed: () {
+                    //
+                    //
+                    //         // Navigator.push(
+                    //         //     context,
+                    //         //     MaterialPageRoute(
+                    //         //         builder: (_) =>
+                    //         //             CheckoutPagePesanan(
+                    //         //                 data)));
+                    //       },
+                    //       child: Text('Lanjut Kirim',
+                    //           style: TextStyle(
+                    //               fontWeight:
+                    //               FontWeight.bold)),
+                    //     ),
+                    //
+                    //     // Visibility(
+                    //     //   visible: data.product.hargaPenadah != null,
+                    //     //   child: MaterialButton(
+                    //     //     minWidth: widthScreen / 2.5,
+                    //     //     shape: RoundedRectangleBorder(
+                    //     //         borderRadius:
+                    //     //             BorderRadius.circular(
+                    //     //                 25)),
+                    //     //     textColor: Colors.white,
+                    //     //     color: Color(0xFF094670),
+                    //     //     onPressed: () {
+                    //     //       log('idTransask ${data?.idTransaction ?? 0}');
+                    //     //       goTo(
+                    //     //           JualKembaliPage(data,
+                    //     //               difference, status),
+                    //     //           context);
+                    //     //     },
+                    //     //     child: Text(
+                    //     //       'Jual Kembali',
+                    //     //       style: TextStyle(
+                    //     //           fontWeight:
+                    //     //               FontWeight.bold),
+                    //     //     ),
+                    //     //   ),
+                    //     // )
+                    //   ],
+                    // )
+                  ],
                 ),
-              );
-            },
-          )),
-    );
+              ),
+            );
+          },
+        ));
   }
 
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:udaskincare/cart/cart_page.dart';
 import 'package:udaskincare/home/home_screen.dart';
 import 'package:udaskincare/profile/profile_page.dart';
 
@@ -41,7 +42,9 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.black,
         child: Icon(Icons.card_travel),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => CartPage()));
+        },
       ),
       bottomNavigationBar: BottomNavigationBar(
         onTap: _changeSelectedNavBar,

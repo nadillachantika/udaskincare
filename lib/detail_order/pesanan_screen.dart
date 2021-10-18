@@ -17,7 +17,7 @@ class _PesananScreenState extends State<PesananScreen>
     with SingleTickerProviderStateMixin {
   TabController _tabController;
   Widget _appBarTitle = Text(
-    "Pesanan",
+    "ORDER",style: TextStyle(color: Colors.black),
 
   );
 
@@ -35,21 +35,18 @@ class _PesananScreenState extends State<PesananScreen>
 
   @override
   Widget build(BuildContext context) {
-    return Theme(
- 
-      child: Scaffold(
-        appBar: _buildBar(context),
-        body: TabBarView(
-                controller: _tabController,
-                children: [
-                  PanenPage(_tabController),
-                  PengirimanPage(_tabController),
+    return Scaffold(
+      appBar: _buildBar(context),
+      body: TabBarView(
+              controller: _tabController,
+              children: [
+                PanenPage(_tabController),
+                PengirimanPage(_tabController),
 
-                  BelumBayarPage(_tabController),
-                  CompletedPengirimanPage(_tabController)
-                ],
-              ),
-      ),
+                BelumBayarPage(_tabController),
+                CompletedPengirimanPage(_tabController)
+              ],
+            ),
     );
   }
 
@@ -80,19 +77,18 @@ class _PesananScreenState extends State<PesananScreen>
             ),
           ),
         ],
-        labelColor: Colors.white,
-        unselectedLabelColor: Color.black,
+        labelColor: Colors.black,
+        unselectedLabelColor: Colors.black,
         controller: _tabController,
       ),
       leading: IconButton(
-        icon: Icon(Icons.arrow_back),
+        icon: Icon(Icons.arrow_back, color: Colors.black,),
         onPressed: () {
           Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(initTab: 3,)));
         },
       ),
       centerTitle: false,
-      automaticallyImplyLeading: false,
-      backgroundColor: Color.white,
+      backgroundColor: Colors.white,
       title: _appBarTitle,
       // actions: () {
       //   return <Widget>[
