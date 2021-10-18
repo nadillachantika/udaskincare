@@ -80,7 +80,7 @@ class _PanenPageState extends State<PanenPage> {
   Widget build(BuildContext context) {
     double widthScreen = MediaQuery.of(context).size.width;
     return Theme(
-      data: ThemeData(fontFamily: 'visby'),
+     
       child: Scaffold(
           backgroundColor: Color(0xFFE5E5E5),
           body: ListView.builder(

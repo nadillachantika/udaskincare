@@ -36,9 +36,7 @@ class _PesananScreenState extends State<PesananScreen>
   @override
   Widget build(BuildContext context) {
     return Theme(
-      data: ThemeData(
-          fontFamily: 'visby'
-      ),
+ 
       child: Scaffold(
         appBar: _buildBar(context),
         body: TabBarView(
@@ -83,7 +81,7 @@ class _PesananScreenState extends State<PesananScreen>
           ),
         ],
         labelColor: Colors.white,
-        unselectedLabelColor: Color(0xFF4CAAAA),
+        unselectedLabelColor: Color.black,
         controller: _tabController,
       ),
       leading: IconButton(
@@ -94,7 +92,7 @@ class _PesananScreenState extends State<PesananScreen>
       ),
       centerTitle: false,
       automaticallyImplyLeading: false,
-      backgroundColor: Color(0xFF094670),
+      backgroundColor: Color.white,
       title: _appBarTitle,
       // actions: () {
       //   return <Widget>[
