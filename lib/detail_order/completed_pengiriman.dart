@@ -119,7 +119,7 @@ class _CompletedPengirimanPageState extends State<CompletedPengirimanPage> {
                         child: Row(children: [
                           Container(
                             child: Image.asset(
-                              "assets/item_care.png",
+                              "assets/item_care.jpg",
                               height: 100,
                               width: 100,
                             ),

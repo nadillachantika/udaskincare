@@ -6,6 +6,7 @@ import 'package:udaskincare/detail_order/belum_bayar_page.dart';
 import 'package:udaskincare/detail_order/completed_pengiriman.dart';
 import 'package:udaskincare/detail_order/panen_page.dart';
 import 'package:udaskincare/detail_order/pengiriman.dart';
+import 'package:udaskincare/home/home_page.dart';
 
 class PesananScreen extends StatefulWidget {
   @override
@@ -23,7 +24,7 @@ class _PesananScreenState extends State<PesananScreen>
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 5, vsync: this);
+    _tabController = TabController(length: 4, vsync: this);
   }
 
   @override
@@ -85,16 +86,12 @@ class _PesananScreenState extends State<PesananScreen>
         unselectedLabelColor: Color(0xFF4CAAAA),
         controller: _tabController,
       ),
-      // leading: IconButton(
-      //   icon: Icon(Icons.arrow_back),
-      //   onPressed: () {
-      //     goAll(
-      //         HomePage(
-      //           initTab: 0,
-      //         ),
-      //         context);
-      //   },
-      // ),
+      leading: IconButton(
+        icon: Icon(Icons.arrow_back),
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(initTab: 3,)));
+        },
+      ),
       centerTitle: false,
       automaticallyImplyLeading: false,
       backgroundColor: Color(0xFF094670),
